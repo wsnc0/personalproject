@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+// import React from 'react';
+// import MainPage from './pages/MainPage'; // Ensure this path matches your structure
 
-function App() {
+// const App = () => {
+//   return (
+//     <div>
+//       <MainPage />
+//     </div>
+//   );
+// };
+
+// export default App;
+
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import MainPage from './pages/MainPage';
+import PhotoBook from './pages/PhotoBook'; // Import the new PhotoBook page
+import HoneyPotEgg from './pages/HoneyPotEgg'; // Import the HoneyPotEgg page
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/PhotoBook" element={<PhotoBook />} />
+        <Route path="/HoneyPotEgg" element={<HoneyPotEgg />} /> {/* Add this line for HoneyPotEgg */}
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
+

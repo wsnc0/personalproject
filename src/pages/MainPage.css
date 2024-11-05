@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital@0;1&display=swap');
+
+.main-container {
+    background-color: #ffffff;
+    min-height: 100vh;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Playfair Display', serif;
+  }
+
+
+.anniversary-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+    color: #000;
+    margin: 40px 0;
+    text-align: center;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: normal;
+    color: #000;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the header items horizontally */
+    justify-content: center; /* Optional: Center items vertically */
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.main-image {
+    max-width: 80%; /* Keeps the image responsive */
+    height: auto;
+    border-radius: 20px;
+    margin: 20px 0;
+    display: block; /* Ensures the image is treated as a block element */
+    margin-left: auto; /* Centers the image */
+    margin-right: auto; /* Centers the image */
+}
+
+.timeline {
+    position: relative;
+    padding: 40px 0;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: #000;
+}
+
+.dotted-line {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: calc(100% + 150px);
+    background-image: linear-gradient(to bottom, #000 50%, transparent 50%);
+    background-size: 2px 20px;
+    z-index: -1;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.timeline-item:nth-child(odd) {
+    padding-right: 52%;
+    padding-left: 0;
+}
+
+.timeline-item:nth-child(even) {
+    padding-left: 52%;
+    padding-right: 0;
+}
+
+.timeline-content {
+    max-width: 450px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.text-content {
+    flex: 1;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    margin-right: 30px;
+    flex-direction: row-reverse;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    margin-left: 30px;
+    flex-direction: row;
+}
+
+.timeline-item:nth-child(odd) .text-content {
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) .text-content {
+    text-align: left;
+}
+
+.timeline-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.timeline-content p {
+    margin-bottom: 8px;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.timeline-content small {
+    color: #666;
+    display: block;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.timeline-image {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.heart-icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: auto;
+    z-index: 2;
+}
+
+.bottom-section {
+    margin-top: 100px;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.image-grid {
+    flex: 0 0 auto;
+    max-width: 600px;
+}
+
+.plushies-image {
+    width: 100%;
+    height: auto;
+}
+
+.honeypot-container {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding-left: 190px;
+}
+
+.honeypot-image {
+    width: 200px;
+    height: auto;
+}
+
+.sleeping-beauty-section {
+    margin-top: 100px;
+    padding: 40px 0;
+    text-align: center;
+  }
+  
+  .sleeping-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    margin-bottom: 40px;
+    line-height: 1.4;
+  }
+  
+  .carousel-container {
+    position: relative;
+    max-width: 800px;
+    height: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+    user-select: none;
+  }
+  
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 3;
+  }
+  
+  .carousel-button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .carousel-button--prev {
+    left: 20px;
+  }
+  
+  .carousel-button--next {
+    right: 20px;
+  }
+  
+  .carousel-track {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .carousel-slide {
+    position: absolute;
+    width: 60%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .carousel-slide.active {
+    z-index: 2;
+  }
+  
+  .carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+  }
+  
+  .carousel-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .carousel-dot.active {
+    background-color: #000;
+    transform: scale(1.2);
+  }
+  
+  @media (max-width: 768px) {
+    .carousel-container {
+      height: 400px;
+    }
+    
+    .sleeping-title {
+      font-size: 2.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .carousel-container {
+      height: 300px;
+    }
+    
+    .sleeping-title {
+      font-size: 2rem;
+    }
+  }

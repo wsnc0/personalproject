@@ -1,0 +1,97 @@
+
+.photo-book-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 24px;
+}
+
+.back-button {
+    display: block;
+    margin-bottom: 16px;
+    font-size: 1.5rem; /* Increased font size for a larger arrow */
+    color: #333;
+    text-decoration: none;
+}
+
+.title {
+    font-size: 2.5rem;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 24px;
+}
+
+.message {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 48px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 16px;
+}
+
+.photo {
+    width: 100%;
+    height: auto; /* Maintain the original aspect ratio */
+    object-fit: contain; /* Ensure the full image is visible */
+    border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .photo-grid {
+        grid-template-columns: repeat(4, 1fr); /* Adjust to 4 columns on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns on even smaller screens */
+    }
+    
+    .photo-book-container {
+        padding: 24px 16px;
+    }
+    
+    .title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .photo-grid {
+        grid-template-columns: 1fr; /* Single column on the smallest screens */
+    }
+    
+    .photo-book-container {
+        padding: 16px 12px;
+    }
+    
+    .title {
+        font-size: 1.8rem;
+    }
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 8px;
+    z-index: 1000; /* Ensure the popup appears on top */
+    font-size: 1.5rem;
+}
+
+.click-message {
+    text-align: center; /* Center the text */
+    font-size: small; /* Adjust the font size */
+    color: #555; /* Change the color as desired */
+    margin-top: 24px; /* Add some spacing above */
+}
